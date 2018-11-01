@@ -1,9 +1,9 @@
 #ifndef ESFERA_H
 #define ESFERA_H
 
-#include "objeto.h"
+#include "forma.h"
 
-class Esfera: public Objeto{
+class Esfera: public Forma{
     double raio;
     Esfera(Vertice, double);
 
