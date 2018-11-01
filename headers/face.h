@@ -1,9 +1,9 @@
 #ifndef FACE_H
 #define FACE_H
 
-#include "objeto.h"
+#include "forma.h"
 
-class Face: public Objeto{
+class Face: public Forma{
 public:
     Face(Vertice, Vertice, Vertice);
 

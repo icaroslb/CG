@@ -1,9 +1,9 @@
 #ifndef CONE_H
 #define CONE_H
 
-#include "objeto.h"
+#include "forma.h"
 
-class Cone: public Objeto{
+class Cone: public Forma{
 public:
     double raio;
 
