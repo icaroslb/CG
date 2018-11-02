@@ -1,4 +1,4 @@
-#include "../headers/matriz.h"
+#include "../Headers/matriz.h"
 
 Matriz::Matriz(){
     val = new double*[4];

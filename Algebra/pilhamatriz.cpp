@@ -1,4 +1,4 @@
-#include "../headers/pilhamatriz.h"
+#include "../Headers/pilhamatriz.h"
 #include <cstdlib>
 
 PilhaMatriz::PilhaMatriz(){

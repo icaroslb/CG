@@ -1,4 +1,4 @@
-#include "../headers/matrizescala.h"
+#include "../Headers/matrizescala.h"
 
 MatrizEscala::MatrizEscala(double Sx, double Sy, double Sz){
     Matriz();

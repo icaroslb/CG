@@ -1,4 +1,4 @@
-#include "../headers/vetor.h"
+#include "../Headers/vetor.h"
 
 Vetor::Vetor(double x, double y, double z){
     val = new double[4];

@@ -1,4 +1,4 @@
-#include "../headers/cone.h"
+#include "../Headers/cone.h"
 
 Cone::Cone(Vertice *topo, Vertice *base, double raio){
     tamanho = 2;

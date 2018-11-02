@@ -4,7 +4,7 @@
 #include <vector>
 
 
-#include "Headers/objeto.h"
+#include "Headers/forma.h"
 #include "Headers/esfera.h"
 #include "Headers/face.h"
 #include "Headers/cone.h"

@@ -1,4 +1,4 @@
-#include "../headers/matrizrotacao.h"
+#include "../Headers/matrizrotacao.h"
 
 MatrizRotacao::MatrizRotacao(int eixo, double angulo){
     for(int i = 0; i < 4; i++){

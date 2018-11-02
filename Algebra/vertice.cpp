@@ -1,4 +1,4 @@
-#include "../headers/vertice.h"
+#include "../Headers/vertice.h"
 
 Vertice::Vertice(double x, double y, double z){
     val = new double[4];

@@ -1,4 +1,4 @@
-#include "../headers/matrizreflexao.h"
+#include "../Headers/matrizreflexao.h"
 
 MatrizReflexao::MatrizReflexao(int eixo1, int eixo2){
     for(int i = 0; i < 4; i++){

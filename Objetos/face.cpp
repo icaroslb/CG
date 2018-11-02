@@ -1,4 +1,4 @@
-#include "../headers/face.h"
+#include "../Headers/face.h"
 
 Face::Face(Vertice vert1, Vertice vert2, Vertice vert3){
     tamanho = 3;

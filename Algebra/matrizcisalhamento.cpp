@@ -1,4 +1,4 @@
-#include "../headers/matrizcisalhamento.h"
+#include "../Headers/matrizcisalhamento.h"
 
 MatrizCisalhamento::MatrizCisalhamento(int eixo1, int eixo2, int eixo3, double angulo){
     for(int i = 0; i < 4; i++){

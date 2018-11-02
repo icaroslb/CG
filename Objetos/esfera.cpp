@@ -1,4 +1,4 @@
-#include "../headers/esfera.h"
+#include "../Headers/esfera.h"
 
 Esfera::Esfera(Vertice centro, double raio){
     tamanho = 1;

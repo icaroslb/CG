@@ -1,4 +1,4 @@
-#include "../headers/matriztranslacao.h"
+#include "../Headers/matriztranslacao.h"
 
 MatrizTranslacao::MatrizTranslacao(double tx, double ty, double tz){
     Matriz();
