@@ -4,7 +4,7 @@
 #include <vector>
 
 
-#include "Headers/objeto.h"
+#include "Headers/forma.h"
 #include "Headers/esfera.h"
 #include "Headers/face.h"
 #include "Headers/cone.h"
@@ -20,7 +20,7 @@
 int main(int argc, char *argv[])
 {
     std::vector<Vertice> listaVert;
-    std::vector<Objeto> listaObj;
+    std::vector<Forma> listaObj;
 
     QApplication a(argc, argv);
     MainWindow w;

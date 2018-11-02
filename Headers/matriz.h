@@ -14,7 +14,7 @@ public:
 
     void operator=(double**);
     void operator*(Vertice);
-    void operator*(Objeto);
+    void operator*(Forma);
     void operator*(Matriz);
 };
 
