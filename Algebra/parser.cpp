@@ -1,42 +1,41 @@
 #include "../headers/parser.h"
 
-bool ObjParser (const char * path, std::vector < ObjectModel> &out_objects){
+bool parser (const char * path, std::vector < Objeto> &out_objects){
 
 	int size = out_objects.size();
+	std::vector<Vertice> temp_vertices;
 
 	FILE * file = fopen(path, "r");
 	if( file == NULL ){
-    	printf("Impossible to open the file !\n");
+    	printf("Impossivel abrir arquivo!\n");
     	return false;
 	}
 	while(true){
-		char lineHeader[128], nameObject[30];
-		int res = fscanf(file, "%s", lineHeader); 
+		char linha_lida[128], nome_do_objeto[30];
+		int res = fscanf(file, "%s", linha_lida); 
 		if(res == EOF)
 			break; 
-		if(strcmp(lineHeader, "o") == 0){
-			fscanf(file, "%s", nameObject);
-			ObjectModel obj(nameObject);
+		if(strcmp(linha_lida, "o") == 0){
+			fscanf(file, "%s", nome_do_objeto);
+			Objeto obj(nome_do_objeto);
 			size ++;
 			out_objects.push_back(obj);
-		}else if(strcmp(lineHeader, "v") == 0){
+			temp_vertices.clear();
+		}else if(strcmp(linha_lida, "v") == 0){
 			float x, y, z;
 			fscanf(file, "%f %f %f\n", &x, &y, &z );
-			Vertex v(x,y,z);
-			out_objects[size-1].addVertex(v);
-		}else if(strcmp(lineHeader, "f") == 0){
+			Vertice v(x,y,z);
+			temp_vertices.push_back(v);
+		}else if(strcmp(linha_lida, "f") == 0){
 			int v1, v2, v3, aux;
 			int matches = fscanf(file, "%d//%d %d//%d %d//%d\n", &v1, &aux, &v2, &aux, &v3, &aux);
-			Vertex v1 = out_objects[size-1].getVertices()[v1 - 1];
-			Vertex v2 = out_objects[size-1].getVertices()[v2 - 1];
-			Vertex v3 = out_objects[size-1].getVertices()[v3 - 1];
-			Edge e1(v1, v2);
-			Edge e2(v2, v3);
-			Edge e3(v3, v1);
-			Face f(e1, e2, e3);
-			out_objects[size-1].addFaces(f);
+			Vertice ve1 = temp_vertices[v1 - 1];
+			Vertice ve2 = temp_vertices[v2 - 1];
+			Vertice ve3 = temp_vertices[v3 - 1];
+			Forma *f = new Face(ve1,ve2,ve3);
+			out_objects[size-1].addForma(f);
 			if(matches != 6){
-				return false
+				return false;
 			}
 		}
 	}
