@@ -38,7 +38,9 @@ SOURCES += \
     Algebra/matrizreflexao.cpp \
     Algebra/matrizcisalhamento.cpp \
     Algebra/matrizrotacao.cpp \
-    Algebra/pilhamatriz.cpp
+    Algebra/pilhamatriz.cpp\
+    Algebra/parser.cpp\
+    Algebra/objeto.cpp
 
 HEADERS += \
         mainwindow.h \
@@ -55,7 +57,9 @@ HEADERS += \
     Headers/matrizrotacao.h \
     Headers/pilhamatriz.h \
     Headers/cone.h \
-    Headers/forma.h
+    Headers/forma.h\
+    Headers/parser.h\
+    Headers/objeto.h
 
 FORMS += \
         mainwindow.ui
