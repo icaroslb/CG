@@ -39,7 +39,7 @@ void Matriz::operator*(Vertice vert){
     vert = novVal;
 }
 
-void Matriz::operator*(Objeto obj){
+void Matriz::operator*(Forma obj){
     for(int i = 0; i < obj.tamanho; i++){
         (*this)*(*(obj.vert[i]));
     }
